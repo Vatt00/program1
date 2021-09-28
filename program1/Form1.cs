@@ -17,7 +17,7 @@ namespace program1
         {
             InitializeComponent();
             data1.Text = DateTime.Now.ToShortDateString();
-            godzina1.Text = DateTime.Now.ToLongTimeString();
+            godzina1.Text = DateTime.Now.ToString("HH:mm");
         }
 
         private void label3_Click(object sender, EventArgs e)

@@ -106,7 +106,7 @@ namespace program1
             // godzina1
             // 
             this.godzina1.AutoSize = true;
-            this.godzina1.Location = new System.Drawing.Point(716, 62);
+            this.godzina1.Location = new System.Drawing.Point(735, 62);
             this.godzina1.Name = "godzina1";
             this.godzina1.Size = new System.Drawing.Size(50, 15);
             this.godzina1.TabIndex = 9;
