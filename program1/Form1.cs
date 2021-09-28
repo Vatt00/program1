@@ -26,7 +26,7 @@ namespace program1
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            ff
         }
 
         private void label1_Click(object sender, EventArgs e)
