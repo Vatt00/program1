@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Timers;
 using System.Threading.Tasks;
@@ -40,6 +41,25 @@ namespace program1
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Font = fd.Font;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog theDialog = new SaveFileDialog();
+            theDialog.Title = "Save Text File";
+            theDialog.Filter = "TXT files|*.txt";
+            theDialog.InitialDirectory = @"C:\";
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllText(theDialog.FileName, textBox1.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
             }
         }
     }
