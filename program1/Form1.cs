@@ -19,6 +19,8 @@ namespace program1
             InitializeComponent();
             data1.Text = DateTime.Now.ToShortDateString();
             godzina1.Text = DateTime.Now.ToString("HH:mm");
+            textBox2.ForeColor = Color.Blue;
+            maskedTextBox1.ForeColor = Color.Blue;
         }
 
         private void label3_Click(object sender, EventArgs e)
