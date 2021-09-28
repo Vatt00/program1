@@ -19,14 +19,10 @@ namespace program1
             data1.Text = DateTime.Now.ToShortDateString();
             godzina1.Text = DateTime.Now.ToLongTimeString();
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            ff
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,6 +32,15 @@ namespace program1
         private void timer1_Tick(object sender, EventArgs e)
         {
             godzina1.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FontDialog fd = new FontDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Font = fd.Font;
+            }
         }
     }
 }
