@@ -21,6 +21,7 @@ namespace program1
             godzina1.Text = DateTime.Now.ToString("HH:mm");
             textBox2.ForeColor = Color.Blue;
             maskedTextBox1.ForeColor = Color.Blue;
+            BackColor = Color.LightSlateGray;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -35,6 +36,33 @@ namespace program1
         private void timer1_Tick(object sender, EventArgs e)
         {
             godzina1.Text = DateTime.Now.ToLongTimeString();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                richTextBox1.Clear();
+                return;
+            }
+            richTextBox1.Text = textBox1.Text;
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                richTextBox1.Clear();
+                return;
+            }
+            richTextBox1.Text = textBox2.Text;
+        }
+        private void maskedTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(maskedTextBox1.Text))
+            {
+                richTextBox1.Clear();
+                return;
+            }
+            richTextBox1.Text = maskedTextBox1.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
