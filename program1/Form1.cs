@@ -84,11 +84,19 @@ namespace program1
             {
                 try
                 {
-                    File.WriteAllText(theDialog.FileName, textBox1.Text);
+                    File.AppendAllText(theDialog.FileName, data1.Text);
+                    File.AppendAllText(theDialog.FileName, " ");
+                    File.AppendAllText(theDialog.FileName, godzina1.Text);
+                    File.AppendAllText(theDialog.FileName, " ");
+                    File.AppendAllText(theDialog.FileName, textBox1.Text);
+                    File.AppendAllText(theDialog.FileName, " ");
+                    File.AppendAllText(theDialog.FileName, textBox2.Text);
+                    File.AppendAllText(theDialog.FileName, " ");
+                    File.AppendAllText(theDialog.FileName, maskedTextBox1.Text);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                    MessageBox.Show("Error: Could not save file. Original error: " + ex.Message);
                 }
             }
         }
