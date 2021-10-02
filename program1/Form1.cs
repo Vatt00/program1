@@ -17,7 +17,7 @@ namespace program1
         public Form1()
         {
             InitializeComponent();
-            data1.Text = DateTime.Now.ToShortDateString();
+            data1.Text = DateTime.Now.ToString("dd MMMM yyyy");
             godzina1.Text = DateTime.Now.ToString("HH:mm");
             textBox2.ForeColor = Color.Blue;
             maskedTextBox1.ForeColor = Color.Blue;
@@ -71,7 +71,7 @@ namespace program1
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Font = fd.Font;
-            }//
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace program1
                     File.AppendAllText(theDialog.FileName, data1.Text);
                     File.AppendAllText(theDialog.FileName, " ");
                     File.AppendAllText(theDialog.FileName, godzina1.Text);
-                    File.AppendAllText(theDialog.FileName, " ");
+                    File.AppendAllText(theDialog.FileName, Environment.NewLine);
                     File.AppendAllText(theDialog.FileName, textBox1.Text);
                     File.AppendAllText(theDialog.FileName, " ");
                     File.AppendAllText(theDialog.FileName, textBox2.Text);
