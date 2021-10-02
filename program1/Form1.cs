@@ -71,7 +71,7 @@ namespace program1
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Font = fd.Font;
-            }
+            }//
         }
 
         private void button2_Click(object sender, EventArgs e)
