@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Timers;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace program1
@@ -23,16 +16,8 @@ namespace program1
             maskedTextBox1.ForeColor = Color.Blue;
             BackColor = Color.LightSlateGray;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label3_Click(object sender, EventArgs e{}
+        private void label1_Click(object sender, EventArgs e){}
         private void timer1_Tick(object sender, EventArgs e)
         {
             godzina1.Text = DateTime.Now.ToLongTimeString();
